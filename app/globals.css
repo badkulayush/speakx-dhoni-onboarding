@@ -135,7 +135,7 @@
 .photo-shade { background: linear-gradient(180deg, #0a0b0ffa 0%, #0a0b0fd9 14%, #0a0b0f33 32%, transparent 48%, transparent 76%, #0a0b0f99 100%); }
 .full-background-shade { background: linear-gradient(180deg, #0a0b0f9c 0%, #0a0b0f22 23%, #0a0b0f0a 42%, #0a0b0f85 60%, #0a0b0ff5 76%, #0a0b0f 100%); }
 .context-background-shade { background: linear-gradient(180deg, #0a0b0f8c 0%, #0a0b0f15 20%, transparent 30%, transparent 49%, #0a0b0f70 62%, #0a0b0ff5 77%, #0a0b0f 100%); }
-.phone-screen .carousel-controls { height: 56px; padding-right: 44px; }
+.phone-screen .carousel-controls { height: 56px; }
 .dot { width: 44px; height: 48px; }
 .dot.selected { width: 52px; }
 .dot > span { width: 7px; height: 7px; background: #ffffff75; }
@@ -195,3 +195,271 @@
 .privacy-body p { white-space: pre-line; margin: 0 0 16px; }
 .privacy-body ul { list-style: disc; padding-left: 20px; margin: 0 0 16px; }
 .privacy-body li + li { margin-top: 8px; }
+
+/* Five first-screen directions: same product promise, different action hierarchy. */
+.concepts-studio.preview-studio[data-slot=tabs] { gap: 18px; padding-top: 18px; }
+.concept-picker > p { margin-bottom: 10px; }
+.concept-tabs[data-slot=tabs-list] { width: min(520px, calc(100vw - 32px)); height: auto; min-height: 44px; border-radius: 18px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 3px; padding: 4px; }
+.concept-tabs [data-slot=tabs-trigger] { min-width: 0; padding: 8px 6px; font-size: 13px; line-height: 18px; white-space: normal; }
+.phone-screen .onboarding { padding-bottom: 26px; }
+.phone-screen .topbar { margin-bottom: 8px; }
+.phone-screen .topbar .icon-button[data-slot=button] { position: relative; z-index: 3; background: #0a0b0f42; backdrop-filter: blur(10px); }
+.hero-kicker { margin: 0 0 8px; color: #f5d9cc; font-size: 13px; line-height: 18px; font-weight: 600; }
+.phone-screen .hero-title h1 { font-size: 38px; line-height: 43px; letter-spacing: -1.2px; }
+.phone-screen .hero-title h1 span { display: block; color: #ffb68d; }
+.entry-actions { position: relative; z-index: 3; display: grid; gap: 10px; padding: 2px 8px 0; text-align: center; }
+.entry-actions .primary-cta[data-slot=button] { height: 56px; font-size: 18px; }
+.account-cta[data-slot=button] { height: 50px; border-radius: 999px; border: 1px solid #686a73; background: #292a31; color: #fff; font-size: 16px; font-weight: 600; }
+.account-cta[data-slot=button]:hover { background: #33343c; }
+.account-login-link { color: #ff6a2a; }
+.concept-login .account-cta[data-slot=button] { background: #000; }
+.concept-login .account-cta[data-slot=button] { border: 0; }
+.concept-login .account-cta[data-slot=button]:hover { background: #15161b; }
+.concept-login .hero-kicker { color: #fff; }
+.entry-actions .trust-note { margin: 4px 0 0; color: #d3d5dd; font-size: 13px; line-height: 18px; }
+
+/* 1 — photo-led. The text has room to breathe and decisions sit below it. */
+.concept-spotlight .hero-card { flex: 1; background: transparent; border: 0; border-radius: 0; box-shadow: none; overflow: visible; }
+.concept-spotlight .hero-title { top: auto; bottom: 30px; left: 12px; right: 12px; text-shadow: 0 3px 18px #000b; }
+.concept-spotlight .carousel-controls { height: 42px; z-index: 3; }
+.concept-spotlight .full-background-shade { background: linear-gradient(180deg, #090a0dbb 0%, #090a0d20 31%, #090a0d12 50%, #090a0dba 76%, #090a0df5 100%); }
+
+/* 2 — image sits inside a deliberate editorial frame. */
+.concept-framed { background: radial-gradient(ellipse at 50% 95%, #512006 0%, transparent 44%), #0a0b0f; }
+.concept-framed .hero-card { border: 1px solid #ffffff22; border-radius: 24px; min-height: 0; box-shadow: 0 20px 44px #0009; }
+.concept-framed .hero-title { top: 26px; left: 16px; right: 16px; text-align: left; }
+.concept-framed .hero-kicker { color: #ffd5c0; }
+.concept-framed .hero-title h1 { font-size: 35px; line-height: 40px; }
+.concept-framed .carousel-controls { height: 46px; }
+.concept-framed .entry-actions { padding-top: 4px; }
+.concept-framed .account-cta[data-slot=button] { background: #292a31; border-color: #686a73; }
+.concept-framed .account-cta[data-slot=button]:hover { background: #33343c; }
+
+/* 3 — left aligned narrative, so the continuation path reads more like a lesson. */
+.concept-split .hero-card { background: transparent; border: 0; border-radius: 0; box-shadow: none; overflow: visible; }
+.concept-split .hero-title { top: auto; bottom: 48px; left: 20px; right: 42px; text-align: left; }
+.concept-split .hero-kicker { max-width: 210px; }
+.concept-split .hero-title h1 { font-size: 41px; line-height: 44px; }
+.concept-split .carousel-controls { justify-content: flex-start; padding-left: 16px; height: 42px; z-index: 3; }
+.concept-split .pause-button { right: 8px; }
+.concept-split .entry-actions { grid-template-columns: 1fr; }
+.concept-split .full-background-shade { background: linear-gradient(90deg, #08090d9c 0%, #08090d1a 58%, #08090d65 100%), linear-gradient(180deg, #08090d6e 0%, transparent 38%, #08090df3 86%); }
+
+/* 4 — actions form a familiar bottom sheet, while the photograph keeps the top open. */
+.concept-sheet .hero-card { flex: 1; background: transparent; border: 0; border-radius: 0; box-shadow: none; overflow: visible; }
+.concept-sheet .hero-title { top: 22px; left: 18px; right: 18px; text-align: center; text-shadow: 0 2px 16px #000b; }
+.concept-sheet .hero-title h1 { font-size: 34px; line-height: 39px; }
+.concept-sheet .hero-kicker { color: #fff; }
+.concept-sheet .carousel-controls { height: 42px; z-index: 3; }
+.concept-sheet .entry-actions { margin: 0 -8px -26px; padding: 18px 16px 20px; gap: 9px; border-radius: 28px 28px 0 0; background: #15161bf5; border-top: 1px solid #ffffff16; box-shadow: 0 -12px 32px #0007; }
+.concept-sheet .account-cta[data-slot=button] { background: #000; border: 0; }
+.concept-sheet .account-cta[data-slot=button]:hover { background: #15161b; }
+.concept-sheet .entry-actions .trust-note { margin-top: 2px; }
+
+.flow-note { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 12px 0; border-block: 1px solid #ffffff18; color: #aeb1bd; font-size: 12px; line-height: 16px; }
+.flow-note span { text-align: center; }
+.flow-note .active { color: #ffb890; font-weight: 600; }
+.login-field { display: grid; gap: 8px; color: #e7e8ec; font-size: 14px; font-weight: 600; }
+.login-field input { width: 100%; height: 52px; border: 1px solid #ffffff33; border-radius: 12px; background: #0a0b0f; color: #fff; padding: 0 14px; font: 16px Figtree, sans-serif; }
+.login-field input::placeholder { color: #9093a0; }
+.login-field input:focus { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+@media (max-width: 560px) {
+  .concept-tabs[data-slot=tabs-list] { height: 64px; }
+  .concept-tabs [data-slot=tabs-trigger] { font-size: 11px; line-height: 14px; padding: 4px 2px; }
+}
+
+/* Full-screen onboarding translated from the supplied Figma flow. */
+.flow-screen { position: absolute; inset: 0; z-index: 30; overflow: hidden auto; background: #fff; color: #0a0b0f; padding: 76px 24px 36px; }
+.flow-back { position: absolute; top: 60px; left: 20px; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: #0a0b0f; }
+.flow-back svg, .flow-progress button svg { width: 24px; height: 24px; }
+.flow-progress { position: absolute; inset: 52px 20px auto; display: flex; align-items: center; gap: 12px; height: 28px; }
+.flow-progress button { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #0a0b0f; }
+.flow-progress span { flex: 1; height: 6px; overflow: hidden; border-radius: 999px; background: #eeeff4; }
+.flow-progress i { display: block; height: 100%; border-radius: inherit; background: #ff4d00; transition: width 180ms ease; }
+.flow-progress .flow-sound-toggle { flex: 0 0 48px; display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: 50%; background: #f7f8fa; color: #0a0b0f; }
+.flow-progress .flow-sound-toggle svg { width: 24px; height: 24px; }
+.flow-progress .flow-sound-toggle:hover { background: #eeeff4; }
+.flow-logo { width: 118px; height: auto; margin-bottom: 46px; }
+.flow-heading h2, .question-copy h2, .notification-screen h2, .sia-screen h2, .ready-screen h2 { margin: 0; color: #0a0b0f; font-size: 28px; line-height: 34px; letter-spacing: -.5px; font-weight: 700; }
+.flow-heading h2 em { color: #ff4d00; font-style: normal; }
+.flow-heading p, .question-copy p, .notification-screen > p, .sia-screen > p, .ready-screen > p { margin: 10px 0 0; color: #626471; font-size: 16px; line-height: 24px; }
+.login-screen, .otp-screen { min-height: 100%; display: flex; flex-direction: column; }
+.login-screen .flow-heading { text-align: center; }
+.phone-field { display: flex; align-items: center; gap: 10px; height: 52px; margin-top: 52px; padding: 0 16px; border: 2px solid #eeeff4; border-radius: 16px; font-size: 16px; font-weight: 600; }
+.phone-field b { display: block; width: 1px; height: 20px; background: #0a0b0f; }
+.phone-field input, .text-field input { min-width: 0; flex: 1; border: 0; outline: 0; color: #0a0b0f; font: 500 16px Figtree, sans-serif; }
+.phone-field input::placeholder, .text-field input::placeholder { color: #8d8d9f; }
+.flow-cta[data-slot=button] { width: 100%; height: 48px; margin-top: auto; border-radius: 999px; background: #ff4d00; color: #fff; font-size: 17px; font-weight: 700; }
+.flow-cta[data-slot=button]:hover { background: #d84a0a; }
+.flow-cta[data-slot=button]:disabled { background: #dcdce4; color: #fff; }
+.login-screen .flow-cta { margin-top: 16px; }
+.whatsapp-optin { display: flex; align-items: center; justify-content: center; gap: 9px; height: 44px; margin-top: 32px; border: 1px dashed #dcdce4; border-radius: 10px; color: #626471; font-size: 14px; line-height: 20px; }
+.whatsapp-optin input { width: 16px; height: 16px; accent-color: #02a372; }
+.flow-legal { margin: auto 0 0; color: #8d8d9f; font-size: 12px; line-height: 16px; text-align: center; }
+.flow-legal a { color: #ff4d00; text-decoration: underline; text-underline-offset: 2px; }
+.otp-screen { padding-top: 40px; }
+.otp-field { width: 264px; height: 60px; margin: 44px auto 0; border: 2px solid #eeeff4; border-radius: 14px; color: #0a0b0f; font: 700 28px/1 Figtree, sans-serif; letter-spacing: 13px; text-align: center; outline-color: #397ce4; }
+.otp-field::placeholder { color: #c4c6cf; letter-spacing: 7px; }
+.resend { margin: 24px auto 0; border: 0; background: transparent; color: #ff4d00; font: 600 14px Figtree, sans-serif; }
+.otp-screen .flow-cta { margin-top: auto; }
+.notification-screen { min-height: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 84px; text-align: center; }
+.bell-mark { width: 48px; height: 48px; margin-bottom: 24px; padding: 10px; border-radius: 16px; color: #ff4d00; background: #fff0e9; }
+.permission-card { width: 100%; display: grid; justify-items: center; gap: 12px; margin: 62px 0 0; padding: 26px 20px 18px; border: 1px solid #eeeff4; border-radius: 20px; box-shadow: 0 16px 32px #1e213017; }
+.permission-card > svg { width: 20px; height: 20px; color: #397ce4; }
+.permission-card strong { color: #20212a; font-size: 16px; line-height: 22px; }
+.permission-card button { width: 100%; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #397ce4; font: 600 16px Figtree, sans-serif; }
+.permission-card .permission-allow[data-slot=button] { height: 48px; border-radius: 12px; background: #397ce4; color: #fff; font: 700 16px Figtree, sans-serif; }
+.notification-screen > .flow-cta { margin-top: auto; }
+.question-screen, .profile-screen { min-height: 100%; display: flex; flex-direction: column; padding-top: 42px; }
+.choice-list { display: grid; gap: 12px; margin-top: 28px; }
+.choice-list button { display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 14px 18px; border: 1px solid #eeeff4; border-radius: 14px; background: #fff; color: #20212a; text-align: left; font: 500 16px/20px Figtree, sans-serif; }
+.choice-list button > span { display: flex; align-items: center; gap: 16px; }
+.choice-list button > span b { width: 20px; flex: 0 0 20px; font-size: 20px; font-weight: 400; text-align: center; }
+.choice-list button.selected { border: 2px solid #ff4d00; padding: 13px 17px; background: #fff8f4; color: #0a0b0f; font-weight: 600; }
+.choice-list button i { display: grid; place-items: center; width: 22px; height: 22px; border: 1.5px solid #c8cad2; border-radius: 50%; color: #fff; }
+.choice-list button.selected i { border-color: #ff4d00; background: #ff4d00; }
+.choice-list button i svg { width: 14px; height: 14px; stroke-width: 3; }
+.question-screen .flow-cta, .profile-screen .flow-cta { margin-top: auto; }
+.time-help { margin: 14px 6px 0; color: #626471; font-size: 13px; line-height: 18px; text-align: center; }
+.text-field { display: grid; gap: 8px; margin-top: 34px; color: #20212a; font-size: 14px; font-weight: 600; }
+.text-field input { height: 52px; padding: 0 16px; border: 2px solid #eeeff4; border-radius: 14px; }
+.field-label { margin: 26px 0 10px; color: #20212a; font-size: 14px; font-weight: 600; }
+.inline-options, .age-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.age-options { grid-template-columns: repeat(3, 1fr); }
+.inline-options button, .age-options button { height: 44px; border: 1px solid #eeeff4; border-radius: 12px; background: #fff; color: #20212a; font: 500 14px Figtree, sans-serif; }
+.inline-options button.selected, .age-options button.selected { border: 2px solid #ff4d00; background: #fff8f4; color: #d84205; font-weight: 700; }
+.sia-screen { min-height: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 24px; text-align: center; }
+.sia-portrait { width: 278px; height: 360px; margin-top: -16px; object-fit: contain; object-position: bottom; }
+.sia-screen h2 { margin-top: 8px; }
+.sia-screen h2 em { color: #ff4d00; font-style: normal; }
+.sia-screen > strong { margin-top: 4px; color: #4a4a5b; font-size: 20px; line-height: 26px; font-weight: 600; }
+.sia-screen > p { margin-top: 8px; }
+.sia-benefits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; width: 100%; margin-top: 34px; }
+.sia-benefits > div { display: grid; justify-items: center; gap: 8px; }
+.sia-benefits span { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: #fff0e3; color: #ff4d00; }
+.sia-benefits svg { width: 24px; height: 24px; stroke-width: 1.8; }
+.sia-benefits small { color: #4a4a5b; font-size: 13px; line-height: 18px; font-weight: 500; }
+.sia-screen .flow-cta { margin-top: auto; }
+.ready-screen { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 62px; text-align: center; }
+.ready-tick { display: grid; place-items: center; width: 72px; height: 72px; margin-bottom: 26px; border-radius: 50%; background: #e5f7f0; color: #02a372; }
+.ready-tick svg { width: 34px; height: 34px; stroke-width: 3; }
+.ready-screen .flow-cta { margin-top: 44px; }
+
+/* Question screens follow the visual system in the onboarding file. */
+.question-screen, .profile-screen { padding-top: 30px; }
+.question-screen .question-copy, .profile-screen .question-copy { width: 100%; }
+.question-screen .question-copy h2, .profile-screen .question-copy h2 { max-width: 366px; margin-inline: auto; color: #20212a; font-size: 18px; line-height: 24px; letter-spacing: 0; text-align: center; }
+.question-screen .choice-list { gap: 16px; margin-top: 12px; }
+.question-screen .choice-list button { min-height: 73px; padding: 18px 19px; border: 1.5px solid #dcdce4; border-radius: 14px; color: #20212a; font-size: 16px; line-height: 22px; }
+.question-screen .choice-list button > span { gap: 14px; }
+.question-screen .choice-list button > span b { font-size: 20px; }
+.question-screen .choice-list button.selected { padding: 17px 18px; border: 2px solid #ff4d00; background: #fff; color: #20212a; }
+.question-screen .choice-list button i { width: 24px; height: 24px; flex: 0 0 24px; border-color: #c8cad2; }
+.question-screen .choice-list button.single-choice.selected i { border: 2px solid #ff4d00; background: #fff; }
+.question-screen .choice-list button.single-choice i b { display: block; width: 10px; height: 10px; border-radius: 50%; background: #ff4d00; }
+.question-screen .choice-list button.multi-choice i { border-radius: 6px; }
+.question-screen .choice-list button.multi-choice.selected i { border-color: #ff4d00; background: #ff4d00; }
+.question-screen .choice-list button i svg { width: 14px; height: 14px; }
+.question-level { padding-top: 47px; }
+.question-level .choice-list { gap: 12px; margin-top: 27px; }
+.question-level .choice-list button { min-height: 68px; padding: 15px 18px; }
+.question-level .choice-list button.selected { padding: 14px 17px; }
+.question-time .choice-list { gap: 12px; }
+.profile-screen .text-field { gap: 6px; margin-top: 24px; color: #4a4a5b; font-size: 16px; font-weight: 600; line-height: 24px; }
+.profile-screen .text-field input { height: 46px; padding: 0 18px; border: 2px solid #eeeff4; border-radius: 23px; }
+.profile-screen .field-label { margin: 19px 0 5px; color: #4a4a5b; font-size: 16px; line-height: 24px; }
+.profile-screen .inline-options { gap: 16px; }
+.profile-screen .inline-options button { display: flex; align-items: center; justify-content: space-between; height: 48px; padding: 0 18px 0 19px; border: 2px solid #eeeff4; border-radius: 24px; color: #0a0b0f; font-size: 16px; line-height: 24px; }
+.profile-screen .inline-options button i { display: grid; place-items: center; width: 24px; height: 24px; border: 2px solid #dcdce4; border-radius: 50%; }
+.profile-screen .inline-options button.selected { border-color: #ff4d00; background: #fff0e3; color: #0a0b0f; }
+.profile-screen .inline-options button.selected i { border-color: #ff4d00; }
+.profile-screen .inline-options button.selected i b { width: 10px; height: 10px; border-radius: 50%; background: #ff4d00; }
+.profile-screen .age-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.profile-screen .age-options button { flex: 1 0 calc(33.333% - 6px); height: 38px; border: 2px solid #eeeff4; border-radius: 19px; color: #0a0b0f; font-size: 16px; line-height: 24px; }
+.profile-screen .age-options button.selected { border-color: #ff4d00; background: #fff0e3; color: #0a0b0f; }
+.profile-screen .inline-options + .field-label { margin-top: 17px; }
+
+/* The first question is intentionally dark in the Figma flow. */
+.flow-language { background: #0a0b0f; color: #fff; }
+.flow-language .flow-progress button { color: #fff; }
+.flow-language .flow-progress span { background: #292a31; }
+.flow-language .question-copy h2 { color: #fff; }
+.flow-language .question-screen .choice-list { gap: 8px; margin-top: 20px; }
+.flow-language .question-screen .choice-list button { min-height: 52px; padding: 13px 16px; border: 2px solid #1a1a22; border-radius: 12px; background: #0a0b0f; color: #fff; font-size: 16px; line-height: 20px; }
+.flow-language .question-screen .choice-list button.selected { padding: 12px 15px; border-color: #ff4d00; background: #19100c; }
+.flow-language .question-screen .choice-list button > span { gap: 0; }
+.flow-language .question-screen .choice-list button i { width: 24px; height: 24px; flex-basis: 24px; border-color: #73737e; }
+.flow-language .question-screen .choice-list button.single-choice.selected i { border-color: #ff4d00; background: #ff4d00; }
+.flow-language .question-screen .choice-list button.single-choice i b { width: 8px; height: 8px; background: #fff; }
+.flow-language .flow-cta[data-slot=button] { box-shadow: 0 8px 20px #0005; }
+
+/* Apply one visual mode for every onboarding screen after Language. */
+.flow-theme-dark { background: #0a0b0f; color: #fff; }
+.flow-theme-dark .flow-progress button { color: #fff; }
+.flow-theme-dark .flow-progress span { background: #292a31; }
+.flow-theme-dark .flow-progress .flow-sound-toggle { background: #292a31; color: #fff; }
+.flow-theme-dark .flow-progress .flow-sound-toggle:hover { background: #3a3b44; }
+.flow-theme-dark .question-copy h2, .flow-theme-dark .profile-screen .question-copy h2, .flow-theme-dark .sia-screen h2, .flow-theme-dark .ready-screen h2 { color: #fff; }
+.flow-theme-dark .question-screen .choice-list button { border-color: #292a31; background: #0a0b0f; color: #fff; }
+.flow-theme-dark .question-screen .choice-list button.selected { border-color: #ff4d00; background: #19100c; color: #fff; }
+.flow-theme-dark .question-screen .choice-list button i { border-color: #73737e; }
+.flow-theme-dark .profile-screen { color: #fff; }
+.flow-theme-dark .text-field, .flow-theme-dark .field-label { color: #f3f4f7; }
+.flow-theme-dark .text-field input { border-color: #292a31; background: #0a0b0f; color: #fff; }
+.flow-theme-dark .inline-options button, .flow-theme-dark .age-options button { border-color: #292a31; background: #0a0b0f; color: #fff; }
+.flow-theme-dark .inline-options button.selected, .flow-theme-dark .age-options button.selected { border-color: #ff4d00; background: #19100c; color: #ffb890; }
+.flow-theme-dark .sia-screen > strong, .flow-theme-dark .sia-screen > p, .flow-theme-dark .sia-benefits small, .flow-theme-dark .ready-screen > p, .flow-theme-dark .time-help { color: #c3c6d0; }
+.flow-theme-dark .sia-benefits span { background: #2c1609; }
+.flow-theme-dark .ready-tick { background: #153527; }
+
+/* In a light preference, Language starts the same light visual system. */
+.flow-theme-light.flow-language { background: #fff; color: #0a0b0f; }
+.flow-theme-light.flow-language .flow-progress button { color: #0a0b0f; }
+.flow-theme-light.flow-language .flow-progress span { background: #eeeff4; }
+.flow-theme-light .flow-progress .flow-sound-toggle { background: #f7f8fa; color: #0a0b0f; }
+.flow-theme-light.flow-language .question-copy h2 { color: #20212a; }
+.flow-theme-light.flow-language .question-screen .choice-list { gap: 12px; margin-top: 20px; }
+.flow-theme-light.flow-language .question-screen .choice-list button { min-height: 52px; padding: 13px 16px; border: 1.5px solid #dcdce4; background: #fff; color: #20212a; }
+.flow-theme-light.flow-language .question-screen .choice-list button.selected { padding: 12px 15px; border: 2px solid #ff4d00; background: #fff; }
+.flow-theme-light.flow-language .question-screen .choice-list button i { border-color: #c8cad2; }
+.flow-theme-light.flow-language .question-screen .choice-list button.single-choice.selected i { border-color: #ff4d00; background: #fff; }
+.flow-theme-light.flow-language .question-screen .choice-list button.single-choice i b { background: #ff4d00; }
+.flow-theme-light.flow-language .flow-cta[data-slot=button] { box-shadow: none; }
+
+/* The expanded language list is a dedicated, scrollable page in the Figma flow. */
+.flow-language-more { overflow: hidden; }
+.more-languages-screen { display: flex; flex-direction: column; height: 100%; min-height: 0; padding-top: 30px; }
+.more-languages-screen .question-copy h2 { max-width: 347px; margin: 0 auto; color: #20212a; font-size: 18px; line-height: 24px; text-align: center; }
+.more-language-scroll { flex: 1; min-height: 0; margin-top: 20px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.more-language-list { display: grid; gap: 12px; padding-bottom: 20px; }
+.more-language-list button { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 52px; padding: 13px 18px 13px 22px; border: 2px solid #eeeff4; border-radius: 12px; background: #fff; color: #0a0b0f; font: 600 16px/20px Figtree, sans-serif; text-align: left; }
+.more-language-list button > span { display: flex; min-width: 0; align-items: center; gap: 5px; }
+.more-language-list button > span b { font-weight: 700; white-space: nowrap; }
+.more-language-list button > span em { overflow: hidden; color: #4a4a5b; font-style: normal; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.more-language-list button i { display: grid; place-items: center; width: 24px; height: 24px; flex: 0 0 24px; border: 2px solid #dcdce4; border-radius: 50%; }
+.more-language-list button.selected { border-color: #ff4d00; background: #fff0e3; }
+.more-language-list button.selected i { border-color: #ff4d00; }
+.more-language-list button.selected i b { width: 10px; height: 10px; border-radius: 50%; background: #ff4d00; }
+.more-languages-screen .flow-cta { flex: 0 0 auto; margin-top: 16px; }
+.flow-language .other-language i { border: 0; border-radius: 0; color: inherit; }
+.flow-language .other-language i svg { width: 18px; height: 18px; }
+.flow-theme-dark .more-languages-screen .question-copy h2 { color: #fff; }
+.flow-theme-dark .more-language-list button { border-color: #292a31; background: #0a0b0f; color: #fff; }
+.flow-theme-dark .more-language-list button > span em { color: #c3c6d0; }
+.flow-theme-dark .more-language-list button i { border-color: #73737e; }
+.flow-theme-dark .more-language-list button.selected { border-color: #ff4d00; background: #19100c; }
+
+/* Localized references use a compact level screen and the three-option profile form. */
+.question-level { padding-top: 30px; }
+.question-level .choice-list { gap: 16px; margin-top: 20px; }
+.profile-screen .text-field { display: grid; gap: 8px; margin-top: 26px; color: #20212a; font-size: 14px; font-weight: 600; line-height: normal; }
+.profile-screen .text-field input { height: 52px; padding: 0 16px; border: 2px solid #eeeff4; border-radius: 14px; }
+.profile-screen .field-label { margin: 26px 0 10px; color: #20212a; font-size: 14px; line-height: normal; }
+.profile-screen .inline-options, .profile-screen .age-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.profile-screen .age-options { grid-template-columns: repeat(3, 1fr); }
+.profile-screen .inline-options button, .profile-screen .age-options button { display: block; height: 44px; padding: 0; border: 1px solid #eeeff4; border-radius: 12px; background: #fff; color: #20212a; font: 500 14px Figtree, sans-serif; }
+.profile-screen .inline-options button.selected, .profile-screen .age-options button.selected { border: 2px solid #ff4d00; background: #fff8f4; color: #d84205; font-weight: 700; }
+.profile-screen .inline-options + .field-label { margin-top: 26px; }
+.question-level { padding-top: 47px; }
+.question-level .choice-list { gap: 12px; margin-top: 27px; }
